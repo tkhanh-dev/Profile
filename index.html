@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Profile Của Khanh Dev</title>
+    <style>
+        /* Cài đặt kiểu chung cho trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #00bfff, #8a2be2); /* Nền xanh và tím */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Thiết lập container chính cho profile */
+        .profile-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Để các phần tử xếp theo cột */
+        }
+
+        /* Khung chứa thông tin profile với nền xanh lam */
+        .profile-box {
+            background-color: #1e90ff; /* Nền xanh lam */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Khung cho tiêu đề "Thông Tin Cá Nhân" */
+        .rainbow-title {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #fff; /* Viền trắng cho khung */
+            border-radius: 8px;
+            animation: rainbow-text 5s linear infinite; /* Thêm hiệu ứng màu cầu vồng */
+            margin-top: 10px; /* Thêm khoảng cách trên tiêu đề */
+        }
+
+        /* Khung avatar hình tròn */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Làm avatar thành hình tròn */
+            background-image: url('https://files.catbox.moe/p2uen9.jpeg'); /* Avatar mẫu, thay thế bằng URL của avatar thật */
+            background-size: cover; /* Đảm bảo ảnh vừa với khung */
+            background-position: center;
+            margin-bottom: 20px; /* Khoảng cách giữa avatar và tiêu đề */
+        }
+
+        /* Định dạng cho các đoạn văn trong profile */
+        .profile-box p {
+            font-size: 16px;
+            color: #fff; /* Màu chữ trắng */
+            margin: 8px 0;
+        }
+
+        /* Định dạng cho các đoạn văn đậm */
+        .profile-box p strong {
+            color: #fff; /* Màu chữ đậm trắng */
+        }
+
+        /* Hiệu ứng màu chữ cầu vồng */
+        @keyframes rainbow-text {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Khung avatar hình tròn -->
+        <div class="avatar"></div>
+        <!-- Khung cho tiêu đề "Thông Tin Cá Nhân" nhấp nháy -->
+        <div class="rainbow-title">
+            Thông Tin Cá Nhân
+        </div>
+        <div class="profile-box">
+            <p><strong>Họ và tên:</strong> Khanh Dev</p>
+            <p><strong>Ngày sinh:</strong> 29/04/2010</p>
+            <p><strong>Địa chỉ:</strong> Tuyên Quang, Việt Nam</p>
+            <p><strong>Email:</strong> khanhshado9@gmail.com</p>
+            <p><strong>Sở thích:</strong> Gaming, Chơi thể thao, Coding</p>
+        </div>
+    </div>
+</body>
+</html>
