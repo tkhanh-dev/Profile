@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Profile Của Khanh Dev</title>
+    <title>Profile Của Khanh Dev</title>
     <style>
-        /* Cài đặt kiểu chung cho trang */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -18,18 +17,16 @@
             overflow: hidden;
         }
 
-        /* Thiết lập container chính cho profile */
         .profile-container {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Để các phần tử xếp theo cột */
+            flex-direction: column;
         }
 
-        /* Khung chứa thông tin profile với nền gradient */
         .profile-box {
-            background: linear-gradient(135deg, #1e90ff, #8a2be2); /* Nền gradient */
+            background: linear-gradient(135deg, #1e90ff, #8a2be2);
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -39,33 +36,31 @@
         }
 
         .profile-box:hover {
-            transform: translateY(-10px); /* Hiệu ứng nâng lên khi hover */
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng */
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        /* Khung cho tiêu đề "Thông Tin Cá Nhân" */
         .rainbow-title {
             display: inline-block;
             padding: 12px 25px;
-            border: 2px solid #fff; /* Viền trắng cho khung */
+            border: 2px solid #fff;
             border-radius: 8px;
-            animation: rainbow-text 5s linear infinite; /* Thêm hiệu ứng màu cầu vồng */
-            margin-top: 15px; /* Thêm khoảng cách trên tiêu đề */
+            animation: rainbow-text 5s linear infinite; 
+            margin-top: 15px;
             font-size: 24px;
             font-weight: bold;
             letter-spacing: 1px;
         }
 
-        /* Khung avatar hình tròn */
         .avatar {
             width: 120px;
             height: 120px;
-            border-radius: 50%; /* Làm avatar thành hình tròn */
-            background-image: url('https://files.catbox.moe/p2uen9.jpeg'); /* Avatar mẫu */
-            background-size: cover; /* Đảm bảo ảnh vừa với khung */
+            border-radius: 50%; 
+            background-image: url('https://files.catbox.moe/p2uen9.jpeg'); /* Có thể thay link avatar của bạn */
+            background-size: cover;
             background-position: center;
-            margin-bottom: 25px; /* Khoảng cách giữa avatar và tiêu đề */
-            border: 5px solid #fff; /* Thêm viền trắng cho avatar */
+            margin-bottom: 25px;
+            border: 5px solid #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
