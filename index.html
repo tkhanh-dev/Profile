@@ -7,7 +7,7 @@
     <style>
         /* Cài đặt kiểu chung cho trang */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -15,6 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
 
         /* Thiết lập container chính cho profile */
@@ -26,50 +27,65 @@
             flex-direction: column; /* Để các phần tử xếp theo cột */
         }
 
-        /* Khung chứa thông tin profile với nền xanh lam */
+        /* Khung chứa thông tin profile với nền gradient */
         .profile-box {
-            background-color: #1e90ff; /* Nền xanh lam */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            background: linear-gradient(135deg, #1e90ff, #8a2be2); /* Nền gradient */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            width: 350px;
             text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .profile-box:hover {
+            transform: translateY(-10px); /* Hiệu ứng nâng lên khi hover */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng */
         }
 
         /* Khung cho tiêu đề "Thông Tin Cá Nhân" */
         .rainbow-title {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: 2px solid #fff; /* Viền trắng cho khung */
             border-radius: 8px;
             animation: rainbow-text 5s linear infinite; /* Thêm hiệu ứng màu cầu vồng */
-            margin-top: 10px; /* Thêm khoảng cách trên tiêu đề */
+            margin-top: 15px; /* Thêm khoảng cách trên tiêu đề */
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
         /* Khung avatar hình tròn */
         .avatar {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%; /* Làm avatar thành hình tròn */
-            background-image: url('https://files.catbox.moe/p2uen9.jpeg'); /* Avatar mẫu, thay thế bằng URL của avatar thật */
+            background-image: url('https://files.catbox.moe/p2uen9.jpeg'); /* Avatar mẫu */
             background-size: cover; /* Đảm bảo ảnh vừa với khung */
             background-position: center;
-            margin-bottom: 20px; /* Khoảng cách giữa avatar và tiêu đề */
+            margin-bottom: 25px; /* Khoảng cách giữa avatar và tiêu đề */
+            border: 5px solid #fff; /* Thêm viền trắng cho avatar */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
-        /* Định dạng cho các đoạn văn trong profile */
+        .avatar:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+        }
+
         .profile-box p {
-            font-size: 16px;
-            color: #fff; /* Màu chữ trắng */
-            margin: 8px 0;
+            font-size: 18px;
+            color: #fff;
+            margin: 12px 0;
+            font-weight: 500;
         }
 
-        /* Định dạng cho các đoạn văn đậm */
         .profile-box p strong {
-            color: #fff; /* Màu chữ đậm trắng */
+            color: #ffdd57; 
         }
 
-        /* Hiệu ứng màu chữ cầu vồng */
         @keyframes rainbow-text {
             0% { color: red; }
             14% { color: orange; }
@@ -85,9 +101,7 @@
 </head>
 <body>
     <div class="profile-container">
-        <!-- Khung avatar hình tròn -->
         <div class="avatar"></div>
-        <!-- Khung cho tiêu đề "Thông Tin Cá Nhân" nhấp nháy -->
         <div class="rainbow-title">
             Thông Tin Cá Nhân
         </div>
